@@ -1,0 +1,38 @@
+﻿@model string
+@{
+    ViewBag.Title = "Google Ranking";
+}
+
+<h2>Google Ranking </h2>
+
+<body>
+    @using (Html.BeginForm())
+    {
+    <div>
+        <div>
+            <label>Enter the URL:</label>
+            <input type="text" id="txtSearchUrl" name="txtSearchUrl" size="400" />
+        </div>
+        <div>
+            <label>Enter the search string:</label>
+            <input type="text" id="txtSearchString" name="txtSearchString" size="200" />
+        </div>
+        <div></div>
+        <div></div>
+        <div>
+            <button type="submit" id="btnSearch" value="Search">Search</button>
+        </div>
+
+        @if (Model != null)
+    {
+        <div>
+            <br />
+            <br />
+            <label>The results are </label>
+            <label id="lblResult">@Model</label>
+
+        </div>
+}
+    </div>
+    }
+</body>
